@@ -1,0 +1,21 @@
+<p>
+  I have been inserted!
+</p>
+ 
+<p [class]="wall">I guard the walls!</p>
+<button [disabled]="myButton" [class]="wall">Click me deneris</button>
+
+<button (click)="myEvent($event)" [class]="bluebut">Kill the Whitewalker!!</button>
+<app-my-new-component></app-my-new-component>
+<ul>
+  <li *ngFor="let arr of myArr">{{ arr }}</li>
+  <!-- <li *ngIf="myArr">I exist</li> -->
+  
+</ul>
+
+<div *ngIf="test; then templ1 else othrTempl"></div>
+
+
+
+<ng-template #templ1>I exist</ng-template>
+<ng-template #othrTempl>I dont exist</ng-template>

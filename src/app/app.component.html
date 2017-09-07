@@ -1,0 +1,76 @@
+
+
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+    <img src="assets\images\test.jpg" width="100%" >
+    
+    
+   
+ 
+    <ul>
+      <li *ngFor="let user of users">{{ user.location }}</li>
+    </ul>
+ 
+    <h1>
+    {{name}}
+  </h1>
+  
+  
+  <img src="{{img_url}}" >
+  <h2>
+    {{id}}
+  </h2>
+
+  <h3>
+   {{age}}
+  </h3>
+ 
+  
+    <div *ngIf="fb_conn;then content else other_content">here is ignored</div>
+    
+    <ng-template #content>
+
+        <div class="alert alert-success" >
+            <strong>Connection successful!</strong>
+          </div>
+
+  </ng-template>
+        
+
+    <ng-template #other_content>
+      
+        <div class="alert alert-danger" >
+            <strong>UNABLE TO CONNECT TO FACEBOOK!</strong>
+        </div>
+
+      
+
+    </ng-template>
+
+    
+  <button type="button" class="btn btn-warning" (click)="refresh()">Retry</button>
+  
+  <button type="button" class="btn btn-primary" (click)="login()">Login</button>
+  
+  <button type="button" class="btn btn-primary" (click)="subscribeToLogin1()">Check login status</button>
+
+  <button type="button" class="btn btn-primary" (click)="subscribeToLogin1()">Linkedin</button>
+
+  <button type="button" class="btn btn-primary" (click)="logout()">Logout</button>
+
+
+  
+
+
+  <!-- <button type="button" class="btn btn-primary" (click)="gotoDetail()">Change page</button> -->
+  
+
+  <div class="fb-login-button" data-width="30" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true"></div>
+
+ 
+ <h1>{{title}}</h1>
+        <button (click)="getHomeTimeline()" >Twitter</button>
+        
+</div>
+
+
